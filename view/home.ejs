@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Döviz Seç</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form method="post" action="/currency">
+        <label>Döviz Seçin:</label>
+        <select name="currency">
+            <% data.forEach((d) => { %>
+            <option value=<%= d.id %>><%= d.name  %></option>
+            <% }); %>
+        </select><br />
+        <input type="submit" value="Gönder" />
+    </form>
+</body>
+</html>
