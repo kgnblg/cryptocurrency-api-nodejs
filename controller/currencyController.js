@@ -7,7 +7,7 @@ module.exports.index = function (req, res) {
     }, (error, response, body) => {
         if(!error && response.statusCode === 200){
             console.log(body);
-            res.render('currency', { data: body });
+            res.render('currency', { data: body[0] });
         }
     });
 }
